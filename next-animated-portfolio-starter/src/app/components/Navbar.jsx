@@ -34,9 +34,9 @@ const Navbar = () => {
         </div>
         {/* LOGO */}
         <div className='justify-center w-1/3 md:hidden lg:flex'>
-            <Link href="/" className='flex items-center justify-center p-1 text-sm font-semibold bg-black rounded-md'>
-              <span className='mr-1 text-white'>Razaa</span>
-              <span className='flex items-center justify-center w-12 h-8 text-black bg-white rounded'>
+            <Link href="/" className='flex items-center justify-center p-1 px-2 text-sm font-semibold rounded-md shadow-md backdrop-blur-2xl bg-slate-500/30'>
+              <span className='mr-1 text-purple-400'>Razaa</span>
+              <span className='flex items-center justify-center w-12 h-8 text-black bg-purple-100 rounded'>
                 .dev
               </span>
             </Link>
