@@ -4,6 +4,14 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 
+// Import images
+import githubIcon from '../../../public/images/github.png';
+import facebookIcon from '../../../public/images/facebook.png';
+import instagramIcon from '../../../public/images/instagram.png';
+import pinterestIcon from '../../../public/images/pinterest.png';
+import linkedinIcon from '../../../public/images/linkedin.png';
+import dribbbleIcon from '../../../public/images/dribbble.png';
+
 const links = [
     { url: "/", title: "Home"},
     { url: "/about", title: "About"},
@@ -14,7 +22,6 @@ const links = [
 const Navbar = () => {
     const [open, setOpen] = useState(false)
     
-
   return (
     <div className='flex items-center justify-between h-full px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
         { /* LINKS */}
@@ -37,22 +44,22 @@ const Navbar = () => {
         { /* SOCIAL */}
         <div className='hidden w-1/3 gap-4 md:flex'>
             <Link href="/">
-               <Image src="/github.png" alt="GitHub" width={24} height={24} />
+               <Image src={githubIcon} alt="GitHub" width={24} height={24} />
             </Link>
             <Link href="/">
-               <Image src="/facebook.png" alt="Facebook" width={24} height={24} />
+               <Image src={facebookIcon} alt="Facebook" width={24} height={24} />
             </Link>
             <Link href="/">
-               <Image src="/instagram.png" alt="Instagram" width={24} height={24} />
+               <Image src={instagramIcon} alt="Instagram" width={24} height={24} />
             </Link>
             <Link href="/">
-               <Image src="/pinterest.png" alt="Pinterest" width={24} height={24} />
+               <Image src={pinterestIcon} alt="Pinterest" width={24} height={24} />
             </Link>
             <Link href="/">
-               <Image src="/linkedin.png" alt="LinkedIn" width={24} height={24} />
+               <Image src={linkedinIcon} alt="LinkedIn" width={24} height={24} />
             </Link>
             <Link href="/">
-               <Image src="/dribbble.png" alt="Dribbble" width={24} height={24} />
+               <Image src={dribbbleIcon} alt="Dribbble" width={24} height={24} />
             </Link>
         </div>
         {/* RESPONSIVE MENU */}
