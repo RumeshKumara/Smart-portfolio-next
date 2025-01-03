@@ -1,5 +1,5 @@
-"use client"
-import React from 'react'
+"use client";
+import React from 'react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -20,7 +20,7 @@ const links = [
 ];
 
 const Navbar = () => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
     
   return (
     <div className='flex items-center justify-between h-full px-4 sm:px-8 md:px-12 lg:px-20 xl:px-48'>
@@ -34,9 +34,9 @@ const Navbar = () => {
         </div>
         {/* LOGO */}
         <div className='justify-center w-1/3 md:hidden lg:flex'>
-            <Link href="/" className='flex items-center justify-center p-1 px-2 text-sm font-semibold rounded-md shadow-md backdrop-blur-2xl bg-slate-500/30 '>
-              <span className='mr-1 text-[#d2d5dd]'>Razaa</span>
-              <span className='flex items-center justify-center w-12 h-8 text-black rounded backdrop-blur-xl bg-purple-100/30'>
+            <Link href="/" className='flex items-center justify-center p-1 px-2 text-sm font-semibold rounded-md shadow-sm shadow-[#32ebd2] backdrop-blur-2xl bg-slate-500/30 '>
+              <span className='mr-1 text-[#32ebd2]'>Razaa</span>
+              <span className='flex items-center justify-center w-12 h-8 text-black rounded backdrop-blur-xl bg-slate-300'>
                 .dev
               </span>
             </Link>
@@ -86,8 +86,8 @@ const Navbar = () => {
           )}
         </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
 
