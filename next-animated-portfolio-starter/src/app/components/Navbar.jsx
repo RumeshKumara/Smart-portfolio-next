@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { FaGithub, FaFacebook, FaInstagram, FaPinterest, FaLinkedin, FaDribbble } from 'react-icons/fa';
 import Navlink from './Navlink';
+import { AiOutlineDownload } from 'react-icons/ai';
 
 const links = [
     { url: "/", title: "Home"},
@@ -25,16 +26,18 @@ const Navbar = () => {
         </div>
         {/* LOGO */}
         <div className='xl:justify-center xl:w-1/3 md:hidden lg:flex'>
-            <Link href="/" className='flex items-center justify-center p-1 px-2 text-sm font-semibold rounded-md shadow-sm shadow-purple-400 backdrop-blur-2xl bg-slate-500/30 '>
-              <span className='mr-1 text-purple-500'>Razaa</span>
-              <span className='flex items-center justify-center w-12 h-8 text-black rounded bg-slate-400/90 backdrop-blur-2xl '>
-                .dev
+            <Link href="/" className='flex items-center justify-center p-[6px] px-2 text-sm font-semibold rounded-md shadow-sm shadow-purple-400 backdrop-blur-2xl bg-slate-500/30 '>
+              <span className='mr-1 text-slate-400'>Razaa.</span>
+              <span className='flex items-center justify-center w-12 h-8 pr-1 text-pink-500 font-bold rounded ring-1 ring-pink-500 bg-[#210e2f] backdrop-blur-2xl '>
+              <a href="" download>
+            <AiOutlineDownload className='mr-[2px] text-lg  text-pink-500' />
+          </a> CV
               </span>
             </Link>
         </div>
         { /* SOCIAL */}
         <div className='hidden w-1/3 gap-4 md:flex'>
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className='text-purple-700 bg-[#2d1d35] p-1 rounded-md' >
+            <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className='text-purple-700 bg-[#210e2f] p-1 rounded-md' >
                <FaGithub size={24} />
             </Link>
             <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className='text-sky-700 bg-[#23263e] p-1 rounded-md'>
@@ -52,6 +55,10 @@ const Navbar = () => {
             <Link href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className='text-pink-600 bg-[#3c233e] p-1 rounded-md'>
                <FaDribbble size={24} />
             </Link>
+            {/* DOWNLOAD CV BUTTON */}
+            
+
+
             
         </div>
         {/* RESPONSIVE MENU */}
