@@ -1,9 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import ContactPage from "./contact/page"; // Corrected import path
-import PortfolioPage from "./portfolio/page"; // Corrected import path
-import AboutPage from "./about/page"; // Corrected import path
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +15,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="w-screen h-screen bg-[#0a0e33]">
           <div className="h-24">
-          <Navbar/>
+            <Navbar />
           </div>
           <div className="h-[calc(100vh - 6rem)]">{children}</div> {/* Fixed typo */}
         </div>
