@@ -25,8 +25,8 @@ const Navbar = () => {
         </div>
         {/* LOGO */}
         <div className='xl:justify-center xl:w-1/3 md:hidden lg:flex'>
-            <Link href="/" className='flex items-center justify-center p-1 px-2 text-sm font-semibold rounded-md shadow-sm shadow-[#32ebd2] backdrop-blur-2xl bg-slate-500/30 '>
-              <span className='mr-1 text-[#32ebd2]'>Razaa</span>
+            <Link href="/" className='flex items-center justify-center p-1 px-2 text-sm font-semibold rounded-md shadow-sm shadow-purple-400 backdrop-blur-2xl bg-slate-500/30 '>
+              <span className='mr-1 text-purple-500'>Razaa</span>
               <span className='flex items-center justify-center w-12 h-8 text-black rounded bg-slate-400/90 backdrop-blur-2xl '>
                 .dev
               </span>
@@ -52,6 +52,7 @@ const Navbar = () => {
             <Link href="https://dribbble.com" target="_blank" rel="noopener noreferrer" className='text-pink-600 bg-[#3c233e] p-1 rounded-md'>
                <FaDribbble size={24} />
             </Link>
+            
         </div>
         {/* RESPONSIVE MENU */}
         <div className='md:hidden'>
