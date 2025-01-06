@@ -26,12 +26,10 @@ const Navbar = () => {
         </div>
         {/* LOGO */}
         <div className='xl:justify-center xl:w-1/3 md:hidden lg:flex'>
-            <Link href="/" className='flex items-center justify-center p-[6px] px-2 text-sm font-semibold rounded-md shadow-sm shadow-purple-400 backdrop-blur-2xl bg-slate-500/30 '>
-              <span className='mr-1 text-slate-400'>Razaa.</span>
-              <span className='flex items-center justify-center w-12 h-8 pr-1 text-pink-500 font-bold rounded ring-1 ring-pink-500 bg-[#210e2f] backdrop-blur-2xl '>
-              <a href="" download>
-            <AiOutlineDownload className='mr-[2px] text-lg  text-pink-500' />
-          </a> CV
+            <Link href="/" className='flex items-center justify-center p-1 px-2 text-sm font-semibold rounded-md shadow-sm shadow-pink-400 backdrop-blur-2xl bg-slate-500/30 '>
+              <span className='mr-1 text-slate-400'>Razaa</span>
+              <span className='flex items-center justify-center w-12 h-8 text-pink-500 font-bold rounded bg-[#210e2f] backdrop-blur-2xl '>
+              .dev
               </span>
             </Link>
         </div>
