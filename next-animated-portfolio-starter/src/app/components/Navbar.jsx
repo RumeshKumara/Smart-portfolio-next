@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { FaGithub, FaFacebook, FaInstagram, FaPinterest, FaLinkedin, FaDribbble } from 'react-icons/fa';
 import Navlink from './Navlink';
-import { AiOutlineDownload } from 'react-icons/ai';
+import {motion } from 'framer-motion';
 
 const links = [
     { url: "/", title: "Home"},
@@ -15,6 +15,61 @@ const links = [
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
+
+    const topVariants={
+      closed:{
+        rotate:0,
+      },
+      opened:{
+        rotate:45,
+        backgroundColor: "#ffffff",
+      }
+    }
+
+    const centerVariants={
+      closed:{
+        opacity:1,
+      },
+      opened:{
+        opacity:0,
+      }
+    }
+    const bottomVariants={
+      closed:{
+        rotate:0,
+      },
+      opened:{
+        rotate:-45,
+        backgroundColor: "#ffffff",
+      }
+    }
+
+    const listVariants={
+      closed:{
+        x: "100vw",
+      },
+      opened:{
+        x: 0,
+        transition:{
+          when: "beforeChildren",
+            staggerChildren: 0.2,
+        }
+      }
+    }
+
+    const listItemVariants={
+        
+        closed:{
+          x: -10,
+          opacity:0,
+
+        },
+        opened:{
+          x: 0,
+          opacity:1,
+        }
+    }
+    
     
   return (
     <div className='flex items-center justify-between h-full px-4 text-xl sm:px-8 md:px-12 lg:px-20 xl:px-48'>
@@ -44,7 +99,7 @@ const Navbar = () => {
             <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className='text-red-600 bg-[#341d1d] p-1 rounded-md'>
                <FaInstagram size={24} />
             </Link>
-            <Link href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className='text-[#661717] bg-[#371c1c] p-1 rounded-md'>
+            <Link href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className='text-[#982121] bg-[#371c1c] p-1 rounded-md'>
                <FaPinterest size={24} />
             </Link>
             <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className='text-[#3038d5] bg-[#202338] p-1 rounded-md'>
@@ -66,20 +121,40 @@ const Navbar = () => {
             className='relative z-50 flex flex-col justify-between w-10 h-8'
             onClick={() => setOpen((prev) => !prev)}
           >
-            <div className='w-10 h-1 bg-white rounded'></div>
-            <div className='w-8 h-1 bg-white rounded'></div>
-            <div className='w-4 h-1 bg-white rounded'></div>
+            <motion.div 
+            variants={topVariants} 
+            animate={open ? "opened" : "closed"}
+            className='w-10 h-1 origin-left bg-white rounded'></motion.div>
+
+            <motion.div 
+            variants={centerVariants} 
+            animate={open ? "opened" : "closed"}
+            className='w-8 h-1 bg-white rounded'></motion.div>
+
+            <motion.div 
+            variants={bottomVariants} 
+            animate={open ? "opened" : "closed"}
+            className='w-4 h-1 origin-left bg-white rounded'></motion.div>
+
           </button>
           { /* MENU LIST */}
           {(open &&
-            <div 
-               className='absolute top-0 left-0 flex flex-col items-center justify-center w-screen h-screen gap-8 text-4xl text-white bg-black'>
+            <motion.div 
+            variants={listVariants} 
+            animate="opened"
+            initial="closed"
+            className='absolute top-0 left-0 z-40 flex flex-col items-center justify-center w-screen h-screen gap-8 text-4xl text-white bg-black'>
                 {links.map((link) => (
-                    <Link href={link.url} key={link.url}>
+                  <motion.div
+                  variants={listItemVariants}
+                  className='' key={link.title}>
+                     <Link href={link.url} key={link.url}>
                         {link.title}
                     </Link>
+                  </motion.div>
+                   
                 ))}
-            </div>
+            </motion.div>
           )}
         </div>
     </div>

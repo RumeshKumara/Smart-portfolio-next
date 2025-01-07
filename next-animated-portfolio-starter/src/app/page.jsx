@@ -9,12 +9,12 @@ const Homepage = () => {
         <Image src={heroImage} alt="hero" className='object-contain' />
       </div>
       {/* TEXT CONTAINER */}
-      <div className='flex flex-col items-center gap-8 h-1/2'>
+      <div className='flex flex-col items-center gap-6 h-1/2'>
         {/* TITLE */}
-        <h1 className="md:text-6xl text-4xl font-bold text-[#d0d0d0]">
-          Welcome TO My Portfolio, I'm Rumesh</h1>
-   
-          
+          <h1 className="md:text-6xl text-4xl font-bold text-[#d0d0d0]">
+            Welcome TO My Portfolio, I'm Rumesh 
+          </h1>  
+        
         {/* SUBTITLE */}
         <p className='md:text-xl text-slate-500'>
           We're a team of passionate designers and developers who create innovative solutions for your business. Let's work together and build something great.
