@@ -1,8 +1,14 @@
 import Image from 'next/image';
 import heroImage from '../../public/images/hero.png';
-import { AiOutlineDownload } from 'react-icons/ai';
+import { motion } from 'framer-motion';
 const Homepage = () => {
   return (
+    <motion.div
+    className='h-full'
+    initial={{ y: "-200vh"}}
+    animate={{y: "0%"}}
+    transition={{ duration: 1}}
+    >
     <div className="flex flex-col items-center h-full lg:flex-row sm:px-8 md:px-12 lg:px-20 xl:px-48 justify-items-center">
       {/* IMAGE CONTAINER */}
       <div className="relative h-1/2 lg:h-full lg:w-1/2">
@@ -27,6 +33,7 @@ const Homepage = () => {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 };
 
