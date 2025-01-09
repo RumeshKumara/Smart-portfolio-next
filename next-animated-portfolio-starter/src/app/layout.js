@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import TransitionProvider from "./components/TransitionProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,12 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="w-screen h-screen bg-gradient-to-b from-[#0a0e33] to-slate-950">
-          <div className="h-24">
-            <Navbar />
-          </div>
-          <div className="h-[calc(100vh - 6rem)]">{children}</div> {/* Fixed typo */}
-        </div>
+        <TransitionProvider>{children}</TransitionProvider>
       </body>
     </html>
   );
