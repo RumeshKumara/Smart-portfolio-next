@@ -1,3 +1,4 @@
+"use client";
 import Image from 'next/image';
 import heroImage from '../../public/images/hero.png';
 import { motion } from 'framer-motion'; // Ensure this import is correct
