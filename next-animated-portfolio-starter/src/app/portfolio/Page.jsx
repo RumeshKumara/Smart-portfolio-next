@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 const PortfolioPage = () => {
   return (
+    <>
     <motion.div
     className='h-full'
     initial={{ y: "-200vh"}}
@@ -10,6 +11,7 @@ const PortfolioPage = () => {
     >
       Portfolio
     </motion.div>
+    </>
   )
 }
 

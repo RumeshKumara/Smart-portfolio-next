@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-
 // ...existing code...
 
 const MyComponent = () => (

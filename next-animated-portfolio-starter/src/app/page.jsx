@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import heroImage from '../../public/images/hero.png';
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; // Ensure this import is correct
 
 const Homepage = () => {
   return (
+    <>
     <motion.div
       className='h-full'
       initial={{ y: "-200vh" }}
@@ -33,6 +34,7 @@ const Homepage = () => {
         </div>
       </div>
     </motion.div>
+    </>
   );
 };
 
