@@ -1,28 +1,19 @@
 "use client";
-import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './Navbar';
 import { usePathname } from 'next/navigation';
 
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null; // or a loading spinner
-  }
+ 
 
   return (
     <AnimatePresence mode='wait'>
       <div 
       key={pathName} 
-      className="w-screen h-screen bg-gradient-to-b from-[#0a0e33] to-slate-950">
+      className="w-screen h-screen bg-gradient-to-b from-[#0a0e33] to-[#240b1d]">
         <motion.div
-          className='h-screen w-screen fixed bg-black rounded-b-[100px] z-40'
+          className='h-screen w-screen fixed bg-pink-900 rounded-b-[100px] z-40'
           animate={{ height: "0vh" }}
           exit={{ height: "140vh" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
@@ -37,7 +28,7 @@ const TransitionProvider = ({ children }) => {
           {pathName.substring(1)}
         </motion.div>
         <motion.div
-          className='h-screen w-screen fixed bg-[black] rounded-t-[100px] z-40 bottom-0'
+          className='h-screen w-screen fixed bg-pink-900 rounded-t-[100px] z-40 bottom-0'
           initial={{ height: "140vh" }}
           animate={{ height: "0vh", transition: { delay: 0.5 } }}
         />

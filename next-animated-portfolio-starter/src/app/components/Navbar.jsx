@@ -13,6 +13,25 @@ const links = [
     { url: "/contact", title: "Contact"}
 ];
 
+const shadowAnimation = {
+  initial: {
+    boxShadow: "0 0 10px 0 rgba(255, 0, 150, 0.5)",
+  },
+  animate: {
+    boxShadow: [
+      "0 0 10px 0 rgba(255, 0, 150, 0.5)",
+      "0 0 10px 0 rgba(0, 204, 255, 0.5)",
+      "0 0 10px 0 rgba(0, 255, 0, 0.5)"
+    ],
+    transition: {
+      repeat: Infinity,
+      repeatType: "loop",
+      duration: 15, // Increased duration for smoother transition
+      ease: "easeInOut", // Changed easing function for smoother animation
+    },
+  },
+};
+
 const Navbar = () => {
     const [open, setOpen] = useState(false);
 
@@ -54,12 +73,19 @@ const Navbar = () => {
             </div>
             {/* LOGO */}
             <div className='xl:justify-center xl:w-1/3 md:hidden lg:flex'>
-                <Link href="/" className='flex items-center justify-center p-1 px-2 text-sm font-semibold rounded-md shadow-sm shadow-pink-400 backdrop-blur-2xl bg-slate-500/30 '>
-                    <span className='mr-1 text-slate-400'>Razaa</span>
-                    <span className='flex items-center justify-center w-12 h-8 text-pink-500 font-bold rounded bg-[#210e2f] backdrop-blur-2xl '>
-                        .dev
-                    </span>
-                </Link>
+                <motion.div
+                    className='flex items-center justify-center p-1 px-2 text-sm font-semibold rounded-md backdrop-blur-2xl bg-slate-500/30 '
+                    variants={shadowAnimation}
+                    initial='initial'
+                    animate='animate'
+                >
+                    <Link href="/" className='flex items-center'>
+                        <span className='mr-1 text-slate-400'>Razaa</span>
+                        <span className='flex items-center justify-center w-12 h-8 text-pink-500 font-bold rounded bg-[#210e2f] backdrop-blur-2xl'>
+                            .dev
+                        </span>
+                    </Link>
+                </motion.div>
             </div>
             { /* SOCIAL */}
             <div className='hidden w-1/3 gap-4 md:flex'>

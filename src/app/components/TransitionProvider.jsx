@@ -8,6 +8,22 @@ import { useEffect } from 'react';
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // or a loading spinner
+  }
+ 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return null; // or a loading spinner
+  }
+
   return (
     <AnimatePresence mode='wait'>
       <div key={pathName} className="w-screen h-screen bg-gradient-to-b from-[#0a0e33] to-slate-950">
