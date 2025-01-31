@@ -1,4 +1,5 @@
 "use client";
+import React from 'react'; // Add this import
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './Navbar';
 import { usePathname } from 'next/navigation';
@@ -6,7 +7,6 @@ import { usePathname } from 'next/navigation';
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
  
-
   return (
     <AnimatePresence mode='wait'>
       <div 

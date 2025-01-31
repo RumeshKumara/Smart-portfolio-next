@@ -1,28 +1,11 @@
 "use client";
-import React, {useEffect} from 'react';
+import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './Navbar';
 import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
 
 const TransitionProvider = ({ children }) => {
   const pathName = usePathname();
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null; // or a loading spinner
-  }
- 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null; // or a loading spinner
-  }
 
   return (
     <AnimatePresence mode='wait'>
