@@ -15,7 +15,7 @@ const sliderVariants = {
     transition: {
       repeat: Infinity,
       repeatType: "loop",
-      duration: 10, // Adjusted duration to fix the gap
+      duration: 20, // Adjusted duration to fix the gap
       ease: "linear",
     },
   },
@@ -43,7 +43,7 @@ if (!isClient) {
     >
       <div className="flex flex-col items-center justify-center h-full px-4 pt-10 lg:flex-row sm:px-8 md:px-12 lg:px-20 xl:px-48">
       <motion.div 
-      className='absolute bottom-[-100px] text-[#80808011] whitespace-nowrap text-[10vh] lg:text-[50vh] font-bold'
+      className='absolute bottom-[-100px] text-[#80808011] whitespace-nowrap text-[50vh] font-bold'
       variants={sliderVariants}
       initial='initial'
       animate='animate'>
