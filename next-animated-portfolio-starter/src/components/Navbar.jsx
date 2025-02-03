@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useState } from 'react';
 import { FaGithub, FaFacebook, FaInstagram, FaPinterest, FaLinkedin, FaDribbble } from 'react-icons/fa';
-import Navlink from './Navlink';
+import Navlink from './navlink';
 import { motion } from 'framer-motion';
 
 const links = [

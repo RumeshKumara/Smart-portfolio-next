@@ -1,4 +1,5 @@
 "use client";
+import React from 'react'; // Add this import
 import { motion } from "framer-motion";
 
 const ContactPage = () => {

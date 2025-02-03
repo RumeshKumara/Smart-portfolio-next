@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="overflow-hidden"
+      <body className=""
       data-new-gr-c-s-check-loaded="14.1092.0"
       data-gr-ext-installed=""
       >
