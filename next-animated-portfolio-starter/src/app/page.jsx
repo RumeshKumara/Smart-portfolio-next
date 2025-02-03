@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'; // Add this import
+import React from 'react';
 import Image from 'next/image';
 import heroImage from '../../public/images/hero.png';
 import { motion } from 'framer-motion';
@@ -13,10 +13,25 @@ const sliderVariants = {
     transition: {
       repeat: Infinity,
       repeatType: "loop",
-      duration: 20, // Adjusted duration to fix the gap
+      duration: 20,
       ease: "linear",
     },
   },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1, staggerChildren: 0.3 } },
+};
+
+const textVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+};
+
+const buttonVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
 };
 
 const Homepage = () => {
@@ -37,25 +52,54 @@ const Homepage = () => {
             Writer Content Creator Influencer
           </motion.div>
           {/* IMAGE CONTAINER */}
-          <div className="relative h-1/4 lg:h-full lg:w-1/3">
+          <motion.div 
+            className="relative h-1/4 lg:h-full lg:w-1/3"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             <Image src={heroImage} alt="hero" className='object-contain' />
-          </div>
+          </motion.div>
           {/* TEXT CONTAINER */}
-          <div className='relative flex flex-col items-center justify-center gap-8 pt-10 h-1/2 lg:w-1/2 lg:h-full'>
+          <motion.div 
+            className='relative flex flex-col items-center justify-center gap-8 pt-10 h-1/2 lg:w-1/2 lg:h-full'
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {/* TITLE */}
-            <h1 className="md:text-5xl text-4xl font-bold text-[#d3d3d3] ">
+            <motion.h1 
+              className="md:text-5xl text-4xl font-bold text-[#d3d3d3]"
+              variants={textVariants}
+            >
               Crafting Digital Experience, designing Tomorrow.
-            </h1>
+            </motion.h1>
             {/* SUBTITLE */}
-            <p className='md:text-xl text-slate-500'>
-              We're a team of passionate designers and developers who create innovative solutions for your business. Let's work together and build something great.
-            </p>
+            <motion.p 
+              className='md:text-xl text-slate-500'
+              variants={textVariants}
+            >
+              We're a team of passionate designers and developers who create innovative solutions for your business. Let's work together and build something great.<span className='bg-[#230f39] text-purple-500 mx-1 pr-2 rounded-xl pb-1 font-mono'> I'm Rumesh</span>
+            </motion.p>
             {/* BUTTON */}
-            <div className='relative flex w-full gap-4'>
-              <button className='p-4 text-white bg-pink-800 rounded-lg ring-1 ring-black'>View My Work</button>
-              <button className='p-4 text-pink-800 rounded-lg ring-1 ring-pink-800'>Contact Me</button>
-            </div>
-          </div>
+            <motion.div 
+              className='relative flex w-full gap-4'
+              variants={containerVariants}
+            >
+              <motion.button 
+                className='p-4 text-white bg-pink-800 rounded-lg ring-1 ring-black'
+                variants={buttonVariants}
+              >
+                View My Work
+              </motion.button>
+              <motion.button 
+                className='p-4 text-pink-800 rounded-lg ring-1 ring-pink-800'
+                variants={buttonVariants}
+              >
+                Contact Me
+              </motion.button>
+            </motion.div>
+          </motion.div>
         </div>
       </motion.div>
     </>

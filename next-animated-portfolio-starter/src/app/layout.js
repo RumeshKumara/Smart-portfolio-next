@@ -1,6 +1,6 @@
 import React from 'react'; // Add this import
 import "./globals.css";
-import TransitionProvider from "./components/TransitionProvider";
+import TransitionProvider from "../components/TransitionProvider";
 
 export const metadata = {
   title: "Razaa | Dev Portfolio",
@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
       data-gr-ext-installed=""
       >
         <TransitionProvider>{children}</TransitionProvider>
+
         
       </body>
     </html>

@@ -141,7 +141,7 @@ const Navbar = () => {
                             <motion.div
                                 variants={listItemVariants}
                                 className='' key={link.title}>
-                                <Link href={link.url} key={link.url}>
+                                <Link href={link.url} key={link.title}>
                                     {link.title}
                                 </Link>
                             </motion.div>
