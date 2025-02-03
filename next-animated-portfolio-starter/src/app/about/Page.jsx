@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { FaJs, FaReact, FaHtml5, FaCss3Alt, FaJava, FaNodeJs, FaSass, } from 'react-icons/fa';
-import { SiTypescript, SiTailwindcss, SiExpress, SiFramer, SiMongodb, SiPostgresql, SiGo } from 'react-icons/si';
+import { SiTypescript, SiTailwindcss, SiExpress, SiFramer, SiMongodb, SiPostgresql, SiGo, SiMysql } from 'react-icons/si';
 
 const AboutPage = () => {
   return (
@@ -47,18 +47,17 @@ const AboutPage = () => {
               <h1 className='text-2xl font-bold text-white '>SKILLS</h1>
             {/* SKILLS CONTAINER */}
             <div className='flex flex-wrap gap-4 '>
+            <div className='flex items-center gap-2 p-2 text-lg text-red-500 bg-[#2b0f0f] rounded cursor-pointer'>
+                <FaHtml5 size={30} /> HTML
+              </div>
+              <div className='flex items-center gap-2 p-2 text-lg text-blue-500 bg-[#100c32] rounded cursor-pointer'>
+                <FaCss3Alt size={30} /> CSS
+              </div>
               <div className='flex items-center gap-2 p-2 text-lg text-yellow-400 bg-[#1d1c0b] rounded cursor-pointer'>
                 <FaJs size={30} /> JavaScript
               </div>
-              <div className='flex items-center gap-2 p-2 text-lg text-blue-600 bg-[#0c0920] rounded cursor-pointer'>
+              <div className='flex items-center gap-2 p-2 text-lg text-blue-500 bg-[#100c2c] rounded cursor-pointer'>
                 <FaReact size={30} /> React.js
-              </div>
-              
-              <div className='flex items-center gap-2 p-2 text-lg text-red-600 bg-[#1f0f0f] rounded cursor-pointer'>
-                <FaHtml5 size={30} /> HTML
-              </div>
-              <div className='flex items-center gap-2 p-2 text-lg text-blue-700 bg-[#070523] rounded cursor-pointer'>
-                <FaCss3Alt size={30} /> CSS
               </div>
               <div className='flex items-center gap-2 p-2 text-lg text-white bg-[#1f2f2f] rounded cursor-pointer'>
                 <FaJava size={30} /> Java
@@ -90,6 +89,9 @@ const AboutPage = () => {
               </div>
               <div className='flex items-center gap-2 p-2 text-lg text-pink-400 bg-[#1f0f1f] rounded cursor-pointer'>
                 <FaSass size={30} /> SCSS
+              </div>
+              <div className='flex items-center gap-2 p-2 text-lg text-blue-500 bg-[#0d1f2f] rounded cursor-pointer'>
+                <SiMysql size={30} /> MySQL
               </div>
             </div>
             <svg fill="none" height="45" viewBox="0 0 24 25" width="44" xmlns="http://www.w3.org/2000/svg"><g stroke="#84014b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m5 15.4199c0 1.8565.73754 3.6371 2.05029 4.9499 1.31276 1.3127 3.09321 2.05 4.94971 2.05s3.637-.7373 4.9498-2.05c1.3127-1.3128 2.0502-3.0934 2.0502-4.9499v-5.99998c0-1.85651-.7375-3.63695-2.0502-4.94971-1.3128-1.31275-3.0933-2.05029-4.9498-2.05029s-3.63695.73754-4.94971 2.05029c-1.31275 1.31276-2.05029 3.0932-2.05029 4.94971z"/><path d="m12 6.41992v7.99998"/><path d="m15 11.4199-3 3-3-3"/></g></svg>
