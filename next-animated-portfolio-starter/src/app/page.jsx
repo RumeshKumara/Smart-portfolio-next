@@ -38,19 +38,13 @@ const Homepage = () => {
   return (
     <>
       <motion.div
-        className='h-full'
+        className='h-full overflow-hidden' // Add overflow-hidden class here
         initial={{ y: "-200vh" }}
         animate={{ y: "0%" }}
         transition={{ duration: 1 }}
       >
-        <div className="flex flex-col items-center justify-center h-full px-4 pt-12 lg:flex-row sm:px-8 md:px-12 lg:px-20 xl:px-48">
-          <motion.div 
-            className='absolute bottom-[-100px] text-[#80808011] whitespace-nowrap text-[50vh] font-bold'
-            variants={sliderVariants}
-            initial='initial'
-            animate='animate'>
-            Writer Content Creator Influencer
-          </motion.div>
+        <div className="flex flex-col items-center justify-center h-full px-4 pt-12 overflow-hidden lg:flex-row sm:px-8 md:px-12 lg:px-20 xl:px-48">
+          
           {/* IMAGE CONTAINER */}
           <motion.div 
             className="relative h-1/4 lg:h-full lg:w-1/3"

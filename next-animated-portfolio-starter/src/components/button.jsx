@@ -1,179 +1,115 @@
-"use client";
 import React from 'react';
 import styled from 'styled-components';
 
 const Button = () => {
   return (
     <StyledWrapper>
-      <div>
-        <svg style={{ position: 'absolute', width: 0, height: 0 }}>
-          <filter width="300%" x="-100%" height="300%" y="-100%" id="unopaq">
-            <feColorMatrix values="1 0 0 0 0 
-            0 1 0 0 0 
-            0 0 1 0 0 
-            0 0 0 9 0" />
-          </filter>
-          <filter width="300%" x="-100%" height="300%" y="-100%" id="unopaq2">
-            <feColorMatrix values="1 0 0 0 0 
-            0 1 0 0 0 
-            0 0 1 0 0 
-            0 0 0 3 0" />
-          </filter>
-          <filter width="300%" x="-100%" height="300%" y="-100%" id="unopaq3">
-            <feColorMatrix values="1 0 0 0.2 0 
-            0 1 0 0.2 0 
-            0 0 1 0.2 0 
-            0 0 0 2 0" />
-          </filter>
-        </svg>
-        <button className="real-button" />
-        <div className="backdrop" />
-        <div className="button-container">
-          <div className="spin spin-blur" />
-          <div className="spin spin-intense" />
-          <div className="backdrop" />
-          <div className="button-border">
-            <div className="spin spin-inside" />
-            <div className="button">Button</div>
-          </div>
+      <button className="button" href="/contact">
+        <p className="button__text">
+          <span style={{ "--index": 0 }}>H</span>
+          <span style={{ "--index": 1 }}>I</span>
+          <span style={{ "--index": 2 }}>R</span>
+          <span style={{ "--index": 3 }}>E</span>
+          <span style={{ "--index": 4 }}> </span>
+          <span style={{ "--index": 5 }}>M</span>
+          <span style={{ "--index": 6 }}>E</span>
+          <span style={{ "--index": 7 }}> </span>
+          <span style={{ "--index": 8 }}>C</span>
+          <span style={{ "--index": 9 }}>L</span>
+          <span style={{ "--index": 10 }}>I</span>
+          <span style={{ "--index": 11 }}>C</span>
+          <span style={{ "--index": 12 }}>K</span>
+          <span style={{ "--index": 13 }}></span>
+          <span style={{ "--index": 14 }}>B</span>
+          <span style={{ "--index": 15 }}>T</span>
+          <span style={{ "--index": 16 }}>N</span>
+        </p>
+        <div className="button__circle" >
+          <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" className="button__icon" width={20}>
+            <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z" fill="currentColor" />
+          </svg>
+          <svg viewBox="0 0 14 15" fill="none" width={20} xmlns="http://www.w3.org/2000/svg" className="button__icon button__icon--copy">
+            <path d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z" fill="currentColor" />
+          </svg>
         </div>
-      </div>
+      </button>
     </StyledWrapper>
   );
 }
 
 const StyledWrapper = styled.div`
-  .button-container {
-    position: relative;
-    margin: 0 2em;
-  }
-
-  .button-border {
-    padding: 3px;
-    inset: 0;
-    background: #0005;
-    border-radius: inherit;
-    clip-path: path(
-      "M 90 0 C 121 0 126 5 126 33 C 126 61 121 66 90 66 L 33 66 C 5 66 0 61 0 33 C 0 5 5 0 33 0 Z"
-    );
-  }
-
   .button {
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 0.875em;
-    clip-path: path(
-      "M 90 0 C 115 0 120 5 120 30 C 120 55 115 60 90 60 L 30 60 C 5 60 0 55 0 30 C 0 5 5 0 30 0 Z"
-    );
-    width: 120px;
-    height: 60px;
-    background: #111215;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    overflow: hidden;
-  }
-
-  .real-button {
-    position: absolute;
-    width: 120px;
-    height: 60px;
-    z-index: 1;
-    outline: none;
-    border: none;
-    border-radius: 17px;
     cursor: pointer;
-    opacity: 0;
-  }
-
-  .backdrop {
-    position: absolute;
-    inset: -9900%;
-    background: radial-gradient(
-      circle at 50% 50%,
-      #0000 0,
-      #0000 20%,
-      #111111aa 50%
-    );
-    background-size: 3px 3px;
-    z-index: -1;
-  }
-
-  .spin {
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    opacity: 0.5;
+    border: none;
+    background: #ec4899 ;
+    color: #fff;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     overflow: hidden;
-    transition: 0.3s;
+    position: relative;
+    display: grid;
+    place-content: center;
+    transition:
+      background 300ms,
+      transform 200ms;
+    font-weight: 600;
   }
 
-  .real-button:active ~ div .spin {
-    opacity: 1;
-  }
-
-  .spin-blur {
-    filter: blur(2em) url(#unopaq);
-  }
-
-  .spin-intense {
-    inset: -0.125em;
-    filter: blur(0.25em) url(#unopaq2);
-    border-radius: 0.75em;
-  }
-
-  .spin-inside {
-    inset: -2px;
-    border-radius: inherit;
-    filter: blur(2px) url(#unopaq3);
-    z-index: 0;
-  }
-
-  .spin::before {
-    content: "";
+  .button__text {
     position: absolute;
-    inset: -150%;
-    animation:
-      speen 8s cubic-bezier(0.56, 0.15, 0.28, 0.86) infinite,
-      woah 4s infinite;
-    animation-play-state: paused;
-  }
+    font-size: 18px;
+    inset: 0;
+    animation: text-rotation 8s linear infinite;
 
-  .real-button:hover ~ div .spin::before {
-    animation-play-state: running;
-  }
-
-  .spin-blur::before {
-    background: linear-gradient(90deg, #f50 30%, #0000 50%, #05f 70%);
-  }
-
-  .spin-intense::before {
-    background: linear-gradient(90deg, #f95 20%, #0000 45% 55%, #59f 80%);
-  }
-
-  .spin-inside::before {
-    background: linear-gradient(90deg, #fc9 30%, #0000 45% 55%, #9cf 70%);
-  }
-
-  @keyframes speen {
-    0% {
-      rotate: 10deg;
+    > span {
+      position: absolute;
+      transform: rotate(calc(19deg * var(--index)));
+      inset: 7px;
     }
-    50% {
-      rotate: 190deg;
-    }
+  }
+
+  .button__circle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    background: #fff;
+    color: #ec4899 ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button__icon--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+
+  .button:hover {
+    background: #000;
+    transform: scale(1.05);
+  }
+
+  .button:hover .button__icon {
+    color: #000;
+  }
+
+  .button:hover .button__icon:first-child {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+
+  .button:hover .button__icon--copy {
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translate(0);
+  }
+
+  @keyframes text-rotation {
     to {
-      rotate: 370deg;
-    }
-  }
-
-  @keyframes woah {
-    0%, to {
-      scale: 1;
-    }
-    50% {
-      scale: 0.75;
+      rotate: 360deg;
     }
   }
 `;

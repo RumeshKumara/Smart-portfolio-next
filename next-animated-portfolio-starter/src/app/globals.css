@@ -3,7 +3,29 @@ html, body {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow-x: hidden; /* Add this line */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0px; 
+  /* Set the height for the bottom scrollbar */
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-track {
+  background: #060121;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #310f31;
+  border-radius: 6px;
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #561757;
+  transition: all 0.5s ease-in-out;
 }
 
 @tailwind base;
