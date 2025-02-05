@@ -26,9 +26,9 @@ const AboutPage = () => {
         transition={{ duration: 1 }}
       >
         {/* CONTAINER */}
-        <div className="min-h-screen lg:flex bg-gradient-to-b from-[#0a0e33] to-[#240b1d] flex flex-col md:flex-row lg:flex-row xl:flex-row">
+        <div className="min-h-screen lg:flex bg-gradient-to-b from-[#0a0e33] to-[#240b1d] flex flex-col md:flex-row lg:flex-row xl:flex-row overflow-scroll">
           {/* TEXT CONTAINER */}
-          <div className=" mt-[-20px] flex flex-col gap-24 p-4 text-xl lg:w-2/3 lg:pr-0 sm:p-8 md:p-12 lg:p-20 xl:p-48 md:gap-32 lg:gap-48 xl:gap-64 xl:1/2">
+          <div className=" mt-[-60px] flex flex-col gap-24 p-4 text-xl lg:w-2/3 lg:pr-0 sm:p-8 md:p-12 lg:p-20 xl:p-48 md:gap-32 lg:gap-48 xl:gap-64 xl:1/2">
             {/* BIOGRAPHY CONTAINER */}
             <div className="flex flex-col justify-center gap-12 ">
               {/* BIOGRAPHY HEADER */}
