@@ -21,15 +21,15 @@ const Loader = () => {
           </defs>
           <g strokeDasharray="175.93 351.86" strokeWidth={12} strokeLinecap="round">
             <g>
-              <rect clipPath="url(#loader-eyes)" height={64} width={128} fill="hsl(193,90%,50%)" />
-              <g stroke="hsl(193,90%,50%)" fill="none">
+              <rect clipPath="url(#loader-eyes)" height={64} width={128} fill="hsl(310.9090909090909, 100%, 30.19607843137255%)" />
+              <g stroke="hsl(314, 100%, 29.411764705882355%)" fill="none">
                 <circle transform="rotate(180,64,64)" r={56} cy={64} cx={64} className="loader__mouth1" />
                 <circle transform="rotate(0,64,64)" r={56} cy={64} cx={64} className="loader__mouth2" />
               </g>
             </g>
             <g mask="url(#loader-mask)">
-              <rect clipPath="url(#loader-eyes)" height={64} width={128} fill="hsl(223,90%,50%)" />
-              <g stroke="hsl(223,90%,50%)" fill="none">
+              <rect clipPath="url(#loader-eyes)" height={64} width={128} fill="hsl(305.15625, 100%, 25.098039215686274%)" />
+              <g stroke="hsl(314.1428571428571, 100%, 15.098039215686274%)" fill="none">
                 <circle transform="rotate(180,64,64)" r={56} cy={64} cx={64} className="loader__mouth1" />
                 <circle transform="rotate(0,64,64)" r={56} cy={64} cx={64} className="loader__mouth2" />
               </g>
